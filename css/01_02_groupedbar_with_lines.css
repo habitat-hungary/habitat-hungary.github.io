@@ -1,0 +1,148 @@
+
+/* Dropdown style */
+.form-style-2{
+	max-height:20px;
+	max-width: 500px;
+	padding: 6px 6px 6px 0px;
+	font: 14px 	font: 12px 'NeueHaasGroteskDisp Pro', Arial, Helvetica, sans-serif;
+;
+}
+
+.form-style-2 label{
+	display: block;
+	margin: 0px 0px 0px 0px;
+}
+.form-style-2 label > span{
+	width: 500px;
+	font-weight: bold;
+	float: left;
+	padding-top: 8px;
+	padding-right: 5px;
+}
+.form-style-2 span.required{
+	color:red;
+}
+
+.select-field{
+	float:left;
+	width: 48%;
+	margin-left: 40px;
+	margin-right: 20px;
+}
+
+.form-style-2 .select-field{
+	width: 200px;
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	border: 1px solid #C2C2C2;
+	box-shadow: 1px 1px 4px #EBEBEB;
+	-moz-box-shadow: 1px 1px 4px #EBEBEB;
+	-webkit-box-shadow: 1px 1px 4px #EBEBEB;
+	border-radius: 3px;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	padding: 4px;
+	outline: none;
+	font: 14px 	'NeueHaasGroteskDisp Pro', Arial, Helvetica, sans-serif;
+
+}
+
+.form-style-2 .select-field:focus{
+	border: 1px solid #C2C2C2;
+}
+
+input.myinput_large{
+	float: left;
+	height:22px;
+	width: 22px;
+	margin: 0px 2px 0px 0px;
+	opacity: 0;
+
+}
+
+.axis_01_02 {
+  font: 14px 'NeueHaasGroteskDisp Pro', Arial, Helvetica, sans-serif;
+}
+
+.axis_01_02 path,
+.axis_01_02 line {
+  fill: none;
+  stroke: #666;
+  shape-rendering: crispEdges;
+}
+
+.axis_second{
+	  font: 14px 'NeueHaasGroteskDisp Pro', Arial, Helvetica, sans-serif;
+
+}
+
+.legend_01_02{
+		font: 13px 'NeueHaasGroteskDisp Pro', Arial, Helvetica, sans-serif;
+        color: #000000;
+        fill: #000000;
+}
+
+.legend_01_02_bar{
+		font: 13px 'NeueHaasGroteskDisp Pro', Arial, Helvetica, sans-serif;
+        color: #000000;
+        fill: #000000;	
+}
+
+text.barline_forras{
+	font: 13px 'NeueHaasGroteskDisp Pro', Arial, Helvetica, sans-serif;
+	font-weight: normal;
+  	font-style: italic;
+	text-decoration: underline;	
+}
+
+
+.axis path,
+.axis line {
+    fill: none;
+    stroke: #000;
+    shape-rendering: crispEdges;
+}
+
+.x.axis path {
+    display: none;
+}
+
+
+.line {
+    fill: none;
+    stroke-width: 0.5px;
+}
+
+.tooltip_01_02{
+	background-color: #FFFFFF;
+	color: #666;
+		box-sizing: border-box;
+	background-color: #FFFFFF;
+	line-height: 1;
+	font: 13px 'NeueHaasGroteskDisp Pro', Arial, Helvetica, sans-serif;
+	text-align: center;
+	padding: 4px;
+	border: 0.5px solid #666;
+	color: #000000;
+	 white-space: pre-line;
+
+}
+
+#bar_01_02_title{
+	font: 17px 'NeueHaasGroteskDisp Pro', Arial, Helvetica, sans-serif;
+	font-weight: normal;
+	text-anchor: middle;
+}
+
+.barline_utasitas{
+	font: 14px 'NeueHaasGroteskDisp Pro', Arial, Helvetica, sans-serif;
+	font-style: italic
+}
+
+.legend_text{
+		font: 14px 'NeueHaasGroteskDisp Pro', Arial, Helvetica, sans-serif;
+        color: #000000;
+        fill: #000000;
+		text-decoration: underline;
+}

@@ -1,0 +1,142 @@
+.form-style-01-01{
+    max-width: 1000px;
+    padding: 6px 6px 6px 6px;
+    font: 14px 'NeueHaasGroteskDisp Pro', Arial, Helvetica, sans-serif;
+}
+
+
+.form-style-01-01 label{
+    display: block;
+    margin: 6px 0px 6px 0px;
+    font: 14px 'NeueHaasGroteskDisp Pro', Arial, Helvetica, sans-serif; 
+    color: #333;
+    margin-left: 0px;
+    text-align: start;
+    height: 31px;
+    line-height: normal; 
+}
+
+#myForm{
+	    margin: 0px 0px 6px 0px;
+}
+
+#myInput2{
+		    margin: 0px 0px 0px 0px;
+
+}
+
+.form-style-01-01 label > span{
+    width: 620px;
+    font: 14px 'NeueHaasGroteskDisp Pro', Arial, Helvetica, sans-serif; 
+    font-weight: normal;
+    float: left;
+    color: #333;
+    padding-top: 8px;
+    padding-right: 0px;
+}
+.form-style-01-01 span.required{
+    color:red;
+}
+
+.form-style-01-01 input.input-field-01-01{
+    width: 20%; 
+}
+.form-style-01-01 input.input-field-01-01{
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    border: 1px solid #C2C2C2;
+    box-shadow: 1px 1px 4px #EBEBEB;
+    -moz-box-shadow: 1px 1px 4px #EBEBEB;
+    -webkit-box-shadow: 1px 1px 4px #EBEBEB;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    padding: 7px;
+    outline: none;
+}
+.form-style-01-01 .input-field-01-01:focus{
+    border: 1px solid #0C0;
+}
+
+
+.button{
+    background: #385988;
+    padding: 8px 12px 8px 12px;
+    border: none;
+    color: #fff;
+	font: 'NeueHaasGroteskDisp Pro', Arial, Helvetica, sans-serif;
+}
+	
+.button:hover, 
+.button:hover{
+	background: #00AFD7;
+	box-shadow:none;
+	-moz-box-shadow:none;
+	-webkit-box-shadow:none;
+}	
+.bar {
+  fill: #385988;
+	border: none;
+    color: #fff;
+	
+}
+
+.bar:hover {
+  fill: #00AFD7;
+}
+
+.axis_userinput {
+  font: 13px 'NeueHaasGroteskDisp Pro', Arial, Helvetica, sans-serif;
+}
+
+.axis_userinput path,
+.axis_userinput line {
+  fill: none;
+  stroke: #666;
+  shape-rendering: crispEdges;
+}
+
+
+div#toolTip {
+	box-sizing: border-box;
+	background-color: #FFFFFF;
+	position: absolute;
+	line-height: 1;
+	font: 13px 'NeueHaasGroteskDisp Pro', Arial, Helvetica, sans-serif;
+	text-align: center;
+	padding: 4px;
+	border: 0.5px solid #666;
+	color: #000000;
+}	
+
+
+line {
+    stroke: #666;
+}
+
+path.marker {
+    fill: #666;
+}
+
+.label_01_01{
+	font: 14px 'NeueHaasGroteskDisp Pro', Arial, Helvetica, sans-serif;
+}
+
+text#userinput_forras{
+	font: 13px 'NeueHaasGroteskDisp Pro', Arial, Helvetica, sans-serif;
+	  font-weight: normal;
+  font-style: italic;
+  text-decoration: underline;	
+
+}
+
+text#ytitle{
+		font: 12px 'NeueHaasGroteskDisp Pro', Arial, Helvetica, sans-serif;
+}
+
+text#userinput_title{
+	font: 16px 'NeueHaasGroteskDisp Pro', Arial, Helvetica, sans-serif;
+	font-weight: normal;
+	text-anchor: middle;
+}

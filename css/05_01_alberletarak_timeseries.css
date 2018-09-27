@@ -1,0 +1,66 @@
+#topic05-vis01 {
+    width: 100%;
+    height: 500px;
+}
+
+body {
+    font-family: 'NeueHaasGroteskDisp Pro', Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    font-weight: normal;
+	fill: #000;
+	color: #666;
+}
+
+svg_0501 {
+    display: block;
+    margin: auto;
+}
+
+.axis_0501 {
+    font-family: 'NeueHaasGroteskDisp Pro', Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    font-weight: normal;
+	fill: #000;
+	color: #666;
+}
+
+.legend_0501 {
+    font-family: 'NeueHaasGroteskDisp Pro', Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    font-weight: normal;
+	fill: #000;
+	color: #666;
+}
+
+.title_0501 {
+    font-family: 'NeueHaasGroteskDisp Pro', Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    font-weight: normal;
+	fill: #000;
+	color: #666;
+}
+
+.data_source_0501 {
+    font-family: 'NeueHaasGroteskDisp Pro', Arial, Helvetica, sans-serif;
+    font-style: italic;
+	font-weight: lighter;
+  	text-decoration: underline;	
+	fill: #000;
+	color: #666;
+}
+
+.axis_0501 path,
+.axis_0501 line {
+    fill: none;
+    stroke: #000;
+    shape-rendering: crispEdges;
+}
+
+.x.axis_0501 path {
+    display: none;
+}
+
+.line_0501 {
+    fill: none;
+    stroke-width: 2px;
+}

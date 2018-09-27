@@ -1,0 +1,43 @@
+#topic04-vis03 {
+    width: 100%;
+    height: 500px;
+    font: 14px "Neue Haas Grotesk W01 Disp", Helvetica, Arial, sans-serif;
+}
+
+svg_0403 {
+    display: block;
+    margin: auto;
+}
+
+.xaxis_0403 .domain {
+    display: none;
+}
+
+.yaxis_0403 { 
+    font: 14px "Neue Haas Grotesk W01 Disp", Helvetica, Arial, sans-serif;
+}
+
+.xaxis_0403 { 
+    font: 14px "Neue Haas Grotesk W01 Disp", Helvetica, Arial, sans-serif;
+}
+
+.title_0403 {
+    font-family: 'NeueHaasGroteskDisp Pro', Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    font-weight: normal;
+	fill: #000;
+	color: #666;
+}
+
+.data_source_0403 {
+    font-family: 'NeueHaasGroteskDisp Pro', Arial, Helvetica, sans-serif;
+    font-style: italic;
+	font-weight: lighter;
+  	text-decoration: underline;	
+	fill: #000;
+	color: #666;
+}
+
+.legend_0403 {
+    font: 14px "Neue Haas Grotesk W01 Disp", Helvetica, Arial, sans-serif;
+}
