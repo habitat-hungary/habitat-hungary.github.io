@@ -1,6 +1,19 @@
-/*TODO:
-- abszolút értékek átnézése
-*/
+body {
+  font: 10px 'NeueHaasGroteskDisp Pro', Arial, Helvetica, sans-serif;
+}
+
+p {
+    font: 10px 'NeueHaasGroteskDisp Pro', Arial, Helvetica, sans-serif;
+    color: black;
+}
+
+h1 {
+    color: black;
+}
+
+footer {
+	font: 10px 'NeueHaasGroteskDisp Pro', Arial, Helvetica, sans-serif;
+}
 
 .carousel-wrapper {
     height: 100%;
@@ -68,6 +81,23 @@
 }
 
 .item-2 {
+    z-index: 2;
+    opacity: 1;
+    background: url('');
+    background-size: cover;
+}
+
+.item-3 {
+    z-index: 2;
+    opacity: 1;
+    background: url('');
+    background-size: cover;
+}
+
+
+.item-4 {
+    z-index: 2;
+    opacity: 1;
     background: url('');
     background-size: cover;
 }
@@ -85,4 +115,12 @@
     opacity: 1;
 }
 
+#item-3:target ~ .item-3 {
+    z-index: 3;
+    opacity: 1;
+}
+
+#item-4:target ~ .item-4 {
+    z-index: 3;
+    opacity: 1;
 }
