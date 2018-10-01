@@ -76,6 +76,7 @@ footer {
 }
 
 .item-1 {
+    font: 'NeueHaasGroteskDisp Pro', Arial, Helvetica, sans-serif;
     z-index: 2;
     opacity: 1;
     background: url('');
@@ -83,16 +84,19 @@ footer {
 }
 
 .item-2 {
+    font: 'NeueHaasGroteskDisp Pro', Arial, Helvetica, sans-serif;
     background: url('');
     background-size: cover;
 }
 
 .item-3 {
+    font: 'NeueHaasGroteskDisp Pro', Arial, Helvetica, sans-serif;
     background: url('');
     background-size: cover;
 }
 
 .item-4 {
+    font: 'NeueHaasGroteskDisp Pro', Arial, Helvetica, sans-serif;
     background: url('');
     background-size: cover;
 }
