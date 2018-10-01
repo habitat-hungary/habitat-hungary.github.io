@@ -6,31 +6,24 @@ body {
     align-items: center;
 }
 
-.outer {
-    display: inline-block;
-    border: 1px solid #000;
-    padding: 1em;
-    overflow-x: scroll;
-    max-width: 1000px;
-    width: 50%;
-    float: left;
-}
-
-.flex {
+.row {
     display: flex;
-    flex-direction: row;
+    font: "Neue Haas Grotesk W01 Disp", Helvetica, Arial, sans-serif;
+    font-size: small;
+    -webkit-overflow-scrolling: touch;
 }
 
-.card {
-    padding: 5em;
-    border: 1px solid red;
-}
 
+.column {
+    flex: 0 0 auto;
+    font: "Neue Haas Grotesk W01 Disp", Helvetica, Arial, sans-serif;
+    font-size: small;
+}
 
 .rTable {
     font: "Neue Haas Grotesk W01 Disp", Helvetica, Arial, sans-serif;
     display: table;
-    width: 70%;
+    width: 50%;
     font-size: small;
 }
 
