@@ -118,7 +118,7 @@ d3.csv("../../data/02_lakasminoseg_energiaszegenyseg/02_02_02_kiadasok_vs_jovede
         .attr("text-anchor", "middle")
         .style("font-size", "18px")
     	.attr("font-family", "NeueHaasGroteskDisp Pro")
-        .text("Az alapvető szükségletek egy főre eső éves kiadásai (Ft, 2016)");
+        .text("Az alapvető szükségletek éves kiadásai jövedelmi tizedek szerint (Ft, 2016)");
 
     svg_020202.append("text")
         .attr("class", "020202_forras")

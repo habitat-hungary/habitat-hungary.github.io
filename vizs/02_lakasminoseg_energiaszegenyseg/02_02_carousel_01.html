@@ -3,101 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <title></title>
-    <link rel="stylesheet" href="../../css/02_03_carousel.css">
-    <script src="../../js/02_02_03_barchart.js"></script>
+    <link rel="stylesheet" href="../../css/02_02_carousel.css">
 
 </head>
 
 <body>
-    <h1>Az egyes vizualizációk között az ábra két oldalán található nyilak segítségével válthat</h1>
     <div class="carousel-wrapper">
         <span id="item-1"></span>
         <span id="item-2"></span>
         <span id="item-3"></span>
         <span id="item-4"></span>
         <div class="carousel-item item-1">
-            <div id="vis-020201"></div>
-
-            <link rel="stylesheet" type="text/css" href="../../css/02_02_01_stacked_barcharts.css">
-            <script src="../../js/d3.v4.min.js"></script>
-            <script src="../../js/02_02_01_rezsicsokkentes.js"></script>
-            <a class="arrow arrow-prev" href="#item-4"></a>
+            <iframe src="02_02_01_rezsicsokkentes.html" scrolling="no" frameborder="0" width="100%" height="100%"></iframe>
+            <a class="arrow arrow-prev" href="#item-3"></a>
             <a class="arrow arrow-next" href="#item-2"></a>
         </div>
 
         <div class="carousel-item item-2">
-            <div id="vis-020202">
-                <script src="../../js/d3.v4.min.js"></script>
-                <script src="../../js/02_02_02_kiadasok_vs_jovedelem.js"></script>
-            </div>
-
+            <iframe src="02_02_02_kiadasok_vs_jovedelem.html" scrolling="no" frameborder="0" width="100%" height="100%"></iframe>
             <a class="arrow arrow-prev" href="#item-1"></a>
             <a class="arrow arrow-next" href="#item-3"></a>
         </div>
 
         <div class="carousel-item item-3">
-            <div id="vis-020203">
-                <div class="form-style-2-k">
-                    <select class="select-field-k" id="d3-dropdown-k">
-                        <option value="02_02_03_furdo">Fürdőszobával rendelkezők aránya</option>
-                        <option value="02_02_03_wc">WC-vel rendelkezők aránya</option>
-                        <option value="02_02_03_viz">Folyó vízzel rendelkezők aránya</option>
-                        <option value="02_02_03_gaz">Vezetékes gázzal rendelkezők aránya</option>
-                        <option value="02_02_03_kozcsatorna">Közcsatornával rendelkezők aránya</option>
-                    </select>
-
-                    <br>
-                </div>
-                <div id="chartkomf"></div>
-                <script>
-                    var komf = BarChartKomf()
-                    d3.csv("../../data/02_lakasminoseg_energiaszegenyseg/02_02_03_furdo.csv", function(errork, datak) {
-                        if (errork) throw error;
-                        d3.select('#chartkomf')
-                            .datum(datak) // bind data to the div
-                            .call(komf); // draw chart in div
-                    });
-
-                    d3.select("select.select-field-k")
-                        .on("change", function(d) {
-                            var selectedk = d3.select("#d3-dropdown-k").node().value;
-
-                            var strk;
-                            if (selectedk == "02_02_03_furdo") {
-                                strk = "../../data/02_lakasminoseg_energiaszegenyseg/02_02_03_furdo.csv";
-                            } else if (selectedk == "02_02_03_wc") {
-                                strk = "../../data/02_lakasminoseg_energiaszegenyseg/02_02_03_wc.csv";
-                            } else if (selectedk == "02_02_03_viz") {
-                                strk = "../../data/02_lakasminoseg_energiaszegenyseg/02_02_03_viz.csv";
-                            } else if (selectedk == "02_02_03_gaz") {
-                                strk = "../../data/02_lakasminoseg_energiaszegenyseg/02_02_03_gaz.csv";
-                            } else {
-                                strk = "../../data/02_lakasminoseg_energiaszegenyseg/02_02_03_kozcsatorna.csv";
-                            }
-
-                            console.log(strk)
-
-
-                            var komf = BarChartKomf()
-                            d3.csv(strk, function(errork, datak) {
-                                if (errork) throw error;
-                                d3.select('#chartkomf')
-                                    .datum(datak) // bind data to the div
-                                    .call(komf); // draw chart in div
-                            });
-                        })
-
-                </script>
-            </div>
+            <iframe src="02_02_03_komfort.html" scrolling="no" frameborder="0" width="100%" height="90%"></iframe>
             <a class="arrow arrow-prev" href="#item-2"></a>
             <a class="arrow arrow-next" href="#item-4"></a>
         </div>
 
         <div class="carousel-item item-4">
-            <div id="vis-020204">
-                <script src="../../js/d3.v4.min.js"></script>
-                <script src="../../js/02_02_04_gaz_vs_fa.js"></script>
-            </div>
+            <iframe src="02_02_04_gaz_vs_fa.html" scrolling="no" frameborder="0" width="100%" height="90%"></iframe>
             <a class="arrow arrow-prev" href="#item-3"></a>
             <a class="arrow arrow-next" href="#item-1"></a>
         </div>
