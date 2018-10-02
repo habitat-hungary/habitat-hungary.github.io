@@ -9,8 +9,13 @@ p {
 }
 
 h1 {
-    font: 14px 'NeueHaasGroteskDisp Pro', Arial, Helvetica, sans-serif;
+    font: 16px 'NeueHaasGroteskDisp Pro', Arial, Helvetica, sans-serif;
     font-weight: bold;
     color: black;
 }
 
+h2 {
+    font: 14px 'NeueHaasGroteskDisp Pro', Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    color: black;
+}
