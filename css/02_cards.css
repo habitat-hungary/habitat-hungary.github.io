@@ -2,13 +2,12 @@
     display: flex;
     font: "Neue Haas Grotesk W01 Disp", Helvetica, Arial, sans-serif;
     font-size: small;
-    -webkit-overflow-scrolling: touch;
+    -webkit-overflow-scrolling: scroll;
 }
 
 
 .column {
     flex: 0 0 auto;
-    flex-shrink: 10%;
     font: "Neue Haas Grotesk W01 Disp", Helvetica, Arial, sans-serif;
     font-size: small;
 }
@@ -16,7 +15,7 @@
 .rTable {
     font: "Neue Haas Grotesk W01 Disp", Helvetica, Arial, sans-serif;
     display: table;
-    width: 80%;
+    width: 20%;
     font-size: small;
 }
 
