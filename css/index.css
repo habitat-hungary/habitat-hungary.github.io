@@ -5,7 +5,7 @@ body {
 p {
     font: 12px 'NeueHaasGroteskDisp Pro', Arial, Helvetica, sans-serif;
     color: black;
-
+    padding-left: 10%;
 }
 
 h1 {
@@ -18,4 +18,5 @@ h2 {
     font: 14px 'NeueHaasGroteskDisp Pro', Arial, Helvetica, sans-serif;
     font-weight: bold;
     color: black;
+    padding-left: 5%;
 }
