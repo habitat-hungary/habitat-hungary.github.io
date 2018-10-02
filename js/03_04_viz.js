@@ -94,7 +94,7 @@ svg_0304.append('text')
 		.attr('id', 'title_0304')
 		.attr("x",  (width_0304 - 460 )/2)
 		.attr("y", -25)
-		.text("Hátralékos fogyasztók a tartozás hossza szerint (2017)");
+		.text("Az állami költségvetés lakhatási célú kiadásai (milliárd Ft, 2012-2019)");
 	
 	
 //Sort totals in descending order
