@@ -1,5 +1,9 @@
 var width = window.innerWidth;
 var height = window.innerHeight;
+d3.select('svg')
+    .attr('width', width * 0.8)
+    .attr('height', height * 0.8);
+
 var f = width + height * 6; // works on desktop, laptop, probably it isn't that good on mobile
 var projection = d3.geoMercator()
     .center([19.5, 47]) // roughly the center of Hungary
