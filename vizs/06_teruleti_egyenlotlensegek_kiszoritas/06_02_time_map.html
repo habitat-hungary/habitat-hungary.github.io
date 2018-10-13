@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+
+<head>
+    <title>Habitat teszt</title>
+</head>
+
+<style>
+    body {
+        font-family: "Helvetica Neue", Helvetica, sans-serif;
+        font-size: 14px;
+        color: #333;
+    }
+
+    #content .info {
+        height: 20px;
+    }
+
+    #content .map path {
+        stroke: #000;
+    }
+
+    #content .bounding-box rect {
+        fill: none;
+        stroke: none;
+        stroke-dasharray: 2, 1;
+    }
+
+    #content .centroid {
+        display: none;
+    }
+
+    #content .centroid circle {
+        fill: red;
+    }
+
+    .map-wit-time-slider {
+        margin: 0;
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+    }
+
+    .sliderContainer {
+        position: relative;
+        top: 10%;
+
+    }
+
+
+    #range{
+        display: none;
+    }
+    input[type=range] {
+  -webkit-appearance: none;
+  width: 91%;
+  margin: 13.8px 0;
+        padding-left: 4.2%;
+}
+input[type=range]:focus {
+  outline: none;
+}
+input[type=range]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 8.4px;
+  cursor: pointer;
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+  background: #3071a9;
+  border-radius: 1.3px;
+  border: 0.2px solid #010101;
+}
+input[type=range]::-webkit-slider-thumb {
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+  border: 1px solid #000000;
+  height: 36px;
+  width: 16px;
+  border-radius: 3px;
+  background: #ffffff;
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-top: -14px;
+}
+input[type=range]:focus::-webkit-slider-runnable-track {
+  background: #367ebd;
+}
+input[type=range]::-moz-range-track {
+  width: 100%;
+  height: 8.4px;
+  cursor: pointer;
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+  background: #3071a9;
+  border-radius: 1.3px;
+  border: 0.2px solid #010101;
+}
+input[type=range]::-moz-range-thumb {
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+  border: 1px solid #000000;
+  height: 36px;
+  width: 16px;
+  border-radius: 3px;
+  background: #ffffff;
+  cursor: pointer;
+}
+input[type=range]::-ms-track {
+  width: 100%;
+  height: 8.4px;
+  cursor: pointer;
+  background: transparent;
+  border-color: transparent;
+  color: transparent;
+}
+input[type=range]::-ms-fill-lower {
+  background: #2a6495;
+  border: 0.2px solid #010101;
+  border-radius: 2.6px;
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+}
+input[type=range]::-ms-fill-upper {
+  background: #3071a9;
+  border: 0.2px solid #010101;
+  border-radius: 2.6px;
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+}
+input[type=range]::-ms-thumb {
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+  border: 1px solid #000000;
+  height: 36px;
+  width: 16px;
+  border-radius: 3px;
+  background: #ffffff;
+  cursor: pointer;
+  height: 8.4px;
+}
+input[type=range]:focus::-ms-fill-lower {
+  background: #3071a9;
+}
+input[type=range]:focus::-ms-fill-upper {
+  background: #367ebd;
+}
+
+
+.ticks {
+  display: flex;
+  justify-content:space-around;
+    padding-left: -10%;
+    padding-right: 0%;
+}
+
+.tick {
+  position: relative;
+  display: inline-flex;
+flex-direction: row;
+  justify-content: center;
+  width: 1px;
+  background: gray;
+  height: 10%;
+  line-height: 2;
+  margin-bottom: 1%;
+}
+
+</style>
+
+<body>
+    <h1>Lakástranzakciók átlagos vételára (2007-2017)</h1>
+    <p>Ide jön majd egy kis magyarázó szöveg arról, hogy csak oda van adatunk, ahol az adott évben több mint három tranzakció történt.</p>
+    <div id="map-wit-time-slider">
+        <div id="sliderContainer">
+            <input id="timeslide" type="range" min="0" max="10" value="0" step="1">
+            <div class="ticks">
+                <!-- You could generate the ticks based on your min, max & step values. -->
+                <span class="tick">2007</span>
+                <span class="tick">2008</span>
+                <span class="tick">2009</span>
+                <span class="tick">2010</span>
+                <span class="tick">2011</span>
+                <span class="tick">2012</span>
+                <span class="tick">2013</span>
+                <span class="tick">2014</span>
+                <span class="tick">2015</span>
+                <span class="tick">2016</span>
+                <span class="tick">2017</span>
+
+            </div>
+            <span id="range">2007</span>
+        </div>
+    </div>
+    <div id="content">
+        <div class="info">Mozgasd az egeret a települések felett!</div>
+        <svg width="100vw" height="100vh">
+            <g class="map"></g>
+            <g class="bounding-box">
+                <rect></rect>
+            </g>
+            <g class="centroid">
+                <circle r="1.2"></circle>
+            </g>
+        </svg>
+    </div>
+
+
+    <script src="../../js/d3.v4.min.js"></script>
+    <script src="../../js/d3-color.v1.min.js"></script>
+    <script src="../../js/d3-interpolate.v1.min.js"></script>
+    <script src="../../js/d3-scale-chromatic.v1.min.js"></script>
+    <script src="../../js/topojson-client@3"></script>
+
+    <script>
+        var width = window.innerWidth;
+        var height = window.innerHeight;
+        var f = width + height * 10; // works on desktop, laptop, probably it isn't that good on mobile
+        var projection = d3.geoMercator()
+            .center([19.5, 47]) // roughly the center of Hungary
+            .translate([width / 2, height / 2])
+            .scale(f);
+        var geoGenerator = d3.geoPath()
+            .projection(projection);
+
+        function handleMouseover(d) {
+            var pixelArea = geoGenerator.area(d);
+            var bounds = geoGenerator.bounds(d);
+            var centroid = geoGenerator.centroid(d);
+            var measure = geoGenerator.measure(d);
+
+            d3.select('#content .info')
+                .html('<b>' + d.properties.NUTS5NAME + '</b><br>lakástranzakciók átlagos vételára (millió Ft)<br>' + eval('d.properties.lakastranzsakciok_' + inputValue));
+
+            d3.select('#content .bounding-box rect')
+                .attr('x', bounds[0][0])
+                .attr('y', bounds[0][1])
+                .attr('width', bounds[1][0] - bounds[0][0])
+                .attr('height', bounds[1][1] - bounds[0][1]);
+
+            d3.select('#content .centroid')
+                .style('display', 'inline')
+                .attr('transform', 'translate(' + centroid + ')');
+        }
+
+        function handleMouseout(d) {
+
+
+            d3.select('#content .info')
+                .html('');
+
+            d3.select('#content .centroid')
+                .style('display', 'none');
+        }
+
+
+        function update(geojson) {
+            var u = d3.select('#content g.map')
+                .selectAll('path')
+                .data(geojson.features)
+                .attr("fill", initialState);
+
+            u.enter()
+                .append('path')
+                .attr("fill", initialState)
+                .attr('d', geoGenerator)
+                .attr("stroke", "#000")
+                .on('mouseover', handleMouseover)
+                .on('mouseout', handleMouseout);
+        }
+
+        // set slider values
+        var inputValue = "2007";
+        var time = ["2007", "2008", "2009", "2010", "2011", "2012", "2013", "2014", "2015", "2016", "2017"];
+
+        // when the input range changes update the rectangle
+        d3.select("#timeslide").on("input", function() {
+            update2(+this.value);
+        });
+
+        function update2(value) {
+            document.getElementById("range").innerHTML = time[value];
+            inputValue = time[value];
+            d3.selectAll("path")
+                .style("fill", timeMatch);
+        }
+
+        // this is where we group the prices and set their color
+        // TODO: group prices according to the example
+        function timeMatch(data) {
+            if (inputValue == "2007") {
+                return d3.interpolateOranges(data.properties.lakastranzsakciok_2007 / 15)
+            } else if (inputValue == "2008") {
+                return d3.interpolateOranges(data.properties.lakastranzsakciok_2008 / 15)
+            } else if (inputValue == "2009") {
+                return d3.interpolateOranges(data.properties.lakastranzsakciok_2009 / 15)
+            } else if (inputValue == "2010") {
+                return d3.interpolateOranges(data.properties.lakastranzsakciok_2010 / 15)
+            } else if (inputValue == "2011") {
+                return d3.interpolateOranges(data.properties.lakastranzsakciok_2011 / 15)
+            } else if (inputValue == "2012") {
+                return d3.interpolateOranges(data.properties.lakastranzsakciok_2012 / 15)
+            } else if (inputValue == "2013") {
+                return d3.interpolateOranges(data.properties.lakastranzsakciok_2013 / 15)
+            } else if (inputValue == "2014") {
+                return d3.interpolateOranges(data.properties.lakastranzsakciok_2014 / 15)
+            } else if (inputValue == "2015") {
+                return d3.interpolateOranges(data.properties.lakastranzsakciok_2015 / 15)
+            } else if (inputValue == "2016") {
+                return d3.interpolateOranges(data.properties.lakastranzsakciok_2016 / 15)
+            } else if (inputValue == "2017") {
+                return d3.interpolateOranges(data.properties.lakastranzsakciok_2017 / 15)
+            };
+        }
+
+        function initialState(data) {
+            if (document.getElementById("range").innerHTML == 2007) {
+                return d3.interpolateOranges(data.properties.lakastranzsakciok_2007 / 15)
+            };
+        }
+
+        // REQUEST DATA
+        d3.json('habitat_jofogas.geojson', function(err, json) {
+            update(json)
+        })
+
+    </script>
+</body>
+
+</html>
