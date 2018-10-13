@@ -1,6 +1,6 @@
 var width = window.innerWidth;
 var height = window.innerHeight;
-var f = width + height * 8; // works on desktop, laptop, probably it isn't that good on mobile
+var f = width + height * 6; // works on desktop, laptop, probably it isn't that good on mobile
 var projection = d3.geoMercator()
     .center([19.5, 47]) // roughly the center of Hungary
     .translate([width / 2, height / 2])
