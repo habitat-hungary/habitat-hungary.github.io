@@ -8,6 +8,15 @@ var projection = d3.geoMercator()
 var geoGenerator = d3.geoPath()
     .projection(projection);
 
+function returnNaN(x) {
+    if (x == 0) {
+        return "Nincs adat";
+    } else {
+        return x
+    }
+
+};
+
 function handleMouseover(d) {
     var pixelArea = geoGenerator.area(d);
     var bounds = geoGenerator.bounds(d);
@@ -15,7 +24,7 @@ function handleMouseover(d) {
     var measure = geoGenerator.measure(d);
 
     d3.select('#content .info')
-        .html('<b>' + d.properties.NUTS5NAME + '</b><br>lakástranzakciók átlagos vételára (millió Ft)<br>' + eval('d.properties.lakastranzsakciok_' + inputValue));
+        .html('<p id="infotext"><b>' + d.properties.NUTS5NAME + '</b><br>lakástranzakciók átlagos vételára (millió Ft)<br>' + returnNaN(eval('d.properties.lakastranzsakciok_' + inputValue)) + '</p>');
 
     d3.select('#content .bounding-box rect')
         .attr('x', bounds[0][0])
@@ -32,7 +41,7 @@ function handleMouseout(d) {
 
 
     d3.select('#content .info')
-        .html('');
+        .html('<p id="unseen"><b>info1</b><br>info2<br>info3<p>');
 
     d3.select('#content .centroid')
         .style('display', 'none');
@@ -74,33 +83,33 @@ function update2(value) {
 // TODO: group prices according to the example
 function timeMatch(data) {
     if (inputValue == "2007") {
-        return d3.interpolateOranges(data.properties.lakastranzsakciok_2007 / 15)
+        return d3.interpolateOranges(data.properties.lakastranzsakciok_2007 / 20)
     } else if (inputValue == "2008") {
-        return d3.interpolateOranges(data.properties.lakastranzsakciok_2008 / 15)
+        return d3.interpolateOranges(data.properties.lakastranzsakciok_2008 / 20)
     } else if (inputValue == "2009") {
-        return d3.interpolateOranges(data.properties.lakastranzsakciok_2009 / 15)
+        return d3.interpolateOranges(data.properties.lakastranzsakciok_2009 / 20)
     } else if (inputValue == "2010") {
-        return d3.interpolateOranges(data.properties.lakastranzsakciok_2010 / 15)
+        return d3.interpolateOranges(data.properties.lakastranzsakciok_2010 / 20)
     } else if (inputValue == "2011") {
-        return d3.interpolateOranges(data.properties.lakastranzsakciok_2011 / 15)
+        return d3.interpolateOranges(data.properties.lakastranzsakciok_2011 / 20)
     } else if (inputValue == "2012") {
-        return d3.interpolateOranges(data.properties.lakastranzsakciok_2012 / 15)
+        return d3.interpolateOranges(data.properties.lakastranzsakciok_2012 / 20)
     } else if (inputValue == "2013") {
-        return d3.interpolateOranges(data.properties.lakastranzsakciok_2013 / 15)
+        return d3.interpolateOranges(data.properties.lakastranzsakciok_2013 / 20)
     } else if (inputValue == "2014") {
-        return d3.interpolateOranges(data.properties.lakastranzsakciok_2014 / 15)
+        return d3.interpolateOranges(data.properties.lakastranzsakciok_2014 / 20)
     } else if (inputValue == "2015") {
-        return d3.interpolateOranges(data.properties.lakastranzsakciok_2015 / 15)
+        return d3.interpolateOranges(data.properties.lakastranzsakciok_2015 / 20)
     } else if (inputValue == "2016") {
-        return d3.interpolateOranges(data.properties.lakastranzsakciok_2016 / 15)
+        return d3.interpolateOranges(data.properties.lakastranzsakciok_2016 / 20)
     } else if (inputValue == "2017") {
-        return d3.interpolateOranges(data.properties.lakastranzsakciok_2017 / 15)
+        return d3.interpolateOranges(data.properties.lakastranzsakciok_2017 / 20)
     };
 }
 
 function initialState(data) {
     if (document.getElementById("range").innerHTML == 2007) {
-        return d3.interpolateOranges(data.properties.lakastranzsakciok_2007 / 15)
+        return d3.interpolateOranges(data.properties.lakastranzsakciok_2007 / 20)
     };
 }
 

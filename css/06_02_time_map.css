@@ -1,7 +1,5 @@
 body {
-    font-family: "Helvetica Neue", Helvetica, sans-serif;
-    font-size: 14px;
-    color: #333;
+    font: 14px 	font: 12px 'NeueHaasGroteskDisp Pro', Arial, Helvetica, sans-serif;
 }
 
 #content .info {
@@ -15,7 +13,6 @@ body {
 #content .bounding-box rect {
     fill: none;
     stroke: none;
-    stroke-dasharray: 2, 1;
 }
 
 #content .centroid {
@@ -48,7 +45,7 @@ body {
 
 input[type=range] {
     -webkit-appearance: none;
-    width: 91%;
+    width: 44%;
     margin: 13.8px 0;
     padding-left: 4.2%;
 }
@@ -148,9 +145,9 @@ input[type=range]:focus::-ms-fill-upper {
 
 .ticks {
     display: flex;
-    justify-content: space-around;
-    padding-left: -10%;
-    padding-right: 0%;
+    justify-content:space-around;
+    padding-left: 2%;
+    padding-right: 50%;
 }
 
 .tick {
@@ -163,4 +160,19 @@ input[type=range]:focus::-ms-fill-upper {
     height: 10%;
     line-height: 2;
     margin-bottom: 1%;
+}
+
+#sources {
+    font: 14px 	font: 12px 'NeueHaasGroteskDisp Pro', Arial, Helvetica, sans-serif;
+    font-style: italic;
+    text-align: center;
+}
+
+#infotext {
+    font: 14px 	font: 12px 'NeueHaasGroteskDisp Pro', Arial, Helvetica, sans-serif;
+}
+
+#unseen {
+    font: 14px 	font: 12px 'NeueHaasGroteskDisp Pro', Arial, Helvetica, sans-serif;
+    display: none;
 }
