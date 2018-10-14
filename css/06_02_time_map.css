@@ -178,3 +178,11 @@ input[type=range]:focus::-ms-fill-upper {
 #legend {
     text-align: center;
 }
+
+h1 {
+    text-align: center;
+}
+
+p {
+    text-align: center;
+}
