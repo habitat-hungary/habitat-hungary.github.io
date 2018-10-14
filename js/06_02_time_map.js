@@ -4,7 +4,7 @@ d3.select('svg')
     .attr('width', width * 0.8)
     .attr('height', height * 0.8);
 
-var f = width + height * 4; // works on desktop, laptop, probably it isn't that good on mobile
+var f = width + height * 4.2; // works on desktop, laptop, probably it isn't that good on mobile
 var projection = d3.geoMercator()
     .center([19.5, 47]) // roughly the center of Hungary
     .translate([width / 2, height / 2])
@@ -87,33 +87,33 @@ function update2(value) {
 // TODO: group prices according to the example
 function timeMatch(data) {
     if (inputValue == "2007") {
-        return d3.interpolateOranges(data.properties.lakastranzsakciok_2007 / 20)
+        return d3.interpolateOranges(data.properties.lakastranzsakciok_2007 / 25)
     } else if (inputValue == "2008") {
-        return d3.interpolateOranges(data.properties.lakastranzsakciok_2008 / 20)
+        return d3.interpolateOranges(data.properties.lakastranzsakciok_2008 / 25)
     } else if (inputValue == "2009") {
-        return d3.interpolateOranges(data.properties.lakastranzsakciok_2009 / 20)
+        return d3.interpolateOranges(data.properties.lakastranzsakciok_2009 / 25)
     } else if (inputValue == "2010") {
-        return d3.interpolateOranges(data.properties.lakastranzsakciok_2010 / 20)
+        return d3.interpolateOranges(data.properties.lakastranzsakciok_2010 / 25)
     } else if (inputValue == "2011") {
-        return d3.interpolateOranges(data.properties.lakastranzsakciok_2011 / 20)
+        return d3.interpolateOranges(data.properties.lakastranzsakciok_2011 / 25)
     } else if (inputValue == "2012") {
-        return d3.interpolateOranges(data.properties.lakastranzsakciok_2012 / 20)
+        return d3.interpolateOranges(data.properties.lakastranzsakciok_2012 / 25)
     } else if (inputValue == "2013") {
-        return d3.interpolateOranges(data.properties.lakastranzsakciok_2013 / 20)
+        return d3.interpolateOranges(data.properties.lakastranzsakciok_2013 / 25)
     } else if (inputValue == "2014") {
-        return d3.interpolateOranges(data.properties.lakastranzsakciok_2014 / 20)
+        return d3.interpolateOranges(data.properties.lakastranzsakciok_2014 / 25)
     } else if (inputValue == "2015") {
-        return d3.interpolateOranges(data.properties.lakastranzsakciok_2015 / 20)
+        return d3.interpolateOranges(data.properties.lakastranzsakciok_2015 / 25)
     } else if (inputValue == "2016") {
-        return d3.interpolateOranges(data.properties.lakastranzsakciok_2016 / 20)
+        return d3.interpolateOranges(data.properties.lakastranzsakciok_2016 / 25)
     } else if (inputValue == "2017") {
-        return d3.interpolateOranges(data.properties.lakastranzsakciok_2017 / 20)
+        return d3.interpolateOranges(data.properties.lakastranzsakciok_2017 / 25)
     };
 }
 
 function initialState(data) {
     if (document.getElementById("range").innerHTML == 2007) {
-        return d3.interpolateOranges(data.properties.lakastranzsakciok_2007 / 20)
+        return d3.interpolateOranges(data.properties.lakastranzsakciok_2007 / 25)
     };
 }
 

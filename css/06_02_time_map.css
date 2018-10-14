@@ -1,5 +1,5 @@
 body {
-    font: 14px 	font: 12px 'NeueHaasGroteskDisp Pro', Arial, Helvetica, sans-serif;
+    font: 14px font: 12px 'NeueHaasGroteskDisp Pro', Arial, Helvetica, sans-serif;
 }
 
 #content .info {
@@ -35,7 +35,6 @@ body {
 .sliderContainer {
     position: relative;
     top: 10%;
-
 }
 
 
@@ -45,9 +44,8 @@ body {
 
 input[type=range] {
     -webkit-appearance: none;
-    width: 44%;
-    margin: 13.8px 0;
-    padding-left: 4.2%;
+    width: 31%;
+    padding-left: 34%;
 }
 
 input[type=range]:focus {
@@ -145,9 +143,9 @@ input[type=range]:focus::-ms-fill-upper {
 
 .ticks {
     display: flex;
-    justify-content:space-around;
-    padding-left: 2%;
-    padding-right: 50%;
+    justify-content: space-between;
+    padding-left: 35%;
+    padding-right: 35%;
 }
 
 .tick {
@@ -163,16 +161,20 @@ input[type=range]:focus::-ms-fill-upper {
 }
 
 #sources {
-    font: 14px 	font: 12px 'NeueHaasGroteskDisp Pro', Arial, Helvetica, sans-serif;
+    font: 14px font: 12px 'NeueHaasGroteskDisp Pro', Arial, Helvetica, sans-serif;
     font-style: italic;
     text-align: center;
 }
 
 #infotext {
-    font: 14px 	font: 12px 'NeueHaasGroteskDisp Pro', Arial, Helvetica, sans-serif;
+    font: 14px font: 12px 'NeueHaasGroteskDisp Pro', Arial, Helvetica, sans-serif;
 }
 
 #unseen {
-    font: 14px 	font: 12px 'NeueHaasGroteskDisp Pro', Arial, Helvetica, sans-serif;
+    font: 14px font: 12px 'NeueHaasGroteskDisp Pro', Arial, Helvetica, sans-serif;
     display: none;
+}
+
+#legend {
+    text-align: center;
 }
