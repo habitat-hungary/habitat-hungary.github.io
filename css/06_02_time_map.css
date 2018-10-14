@@ -153,11 +153,12 @@ input[type=range]:focus::-ms-fill-upper {
     display: inline-flex;
     flex-direction: row;
     justify-content: center;
-    width: 1px;
+    width: 2px;
     background: gray;
-    height: 10%;
     line-height: 2;
-    margin-bottom: 1%;
+    margin-top: 3%;
+    font-size: xx-small;
+    font-weight: bold;
 }
 
 #sources {
