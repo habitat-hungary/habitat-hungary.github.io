@@ -180,9 +180,11 @@ input[type=range]:focus::-ms-fill-upper {
 }
 
 h1 {
+    font: 14px font: 12px 'NeueHaasGroteskDisp Pro', Arial, Helvetica, sans-serif;
     text-align: center;
 }
 
 p {
+    font: 14px font: 12px 'NeueHaasGroteskDisp Pro', Arial, Helvetica, sans-serif;
     text-align: center;
 }
