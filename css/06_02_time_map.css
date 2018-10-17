@@ -141,6 +141,14 @@ input[type=range]:focus::-ms-fill-upper {
 }
 
 
+.ticks-cat {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 35%;
+    padding-right: 35%;
+}
+
+
 .ticks {
     display: flex;
     justify-content: space-between;
@@ -188,4 +196,15 @@ h1 {
 p {
     font: 14px font: 12px 'NeueHaasGroteskDisp Pro', Arial, Helvetica, sans-serif;
     text-align: center;
+}
+
+img {
+    height: 1vh;
+    width: 30vw;
+}
+
+#legend {
+    margin-top: 2%;
+    margin-left: 0%;
+    margin-bottom: 2%;
 }
