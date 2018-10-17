@@ -29,7 +29,7 @@ function handleMouseover(d) {
     var measure = geoGenerator.measure(d);
 
     d3.select('#content .info')
-        .html('<p id="infotext"><b>' + d.properties.NUTS5NAME + '</b><br>Kat átlagos vételára (millió Ft)<br>' + returnNaN(eval('d.properties.Lakástranzakciók_' + inputValue)) + '</p>');
+        .html('<p id="infotext"><b>' + d.properties.NUTS5NAME + '</b><br>Lakástranzakciók átlagos vételára (millió Ft)<br>' + returnNaN(eval('d.properties.Lakástranzakciók_' + inputValue)) + '</p>');
 
     d3.select('#content .bounding-box rect')
         .attr('x', bounds[0][0])
