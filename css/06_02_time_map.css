@@ -144,9 +144,23 @@ input[type=range]:focus::-ms-fill-upper {
 .ticks-cat {
     display: flex;
     justify-content: space-between;
-    padding-left: 35%;
-    padding-right: 35%;
+    padding-left: 33%;
+    padding-right: 33%;
 }
+
+.tick2 {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 10%;
+    background: gray;
+    line-height: 0;
+    margin-top: 3%;
+    font-size: xx-small;
+    font-weight: bold;
+}
+
 
 
 .ticks {
