@@ -114,7 +114,7 @@ function timeMatch(data) {
 
 function initialState(data) {
     if (document.getElementById("range").innerHTML == 2007) {
-        return d3.interpolateOranges(data.properties.Category / 7)
+        return d3.interpolateOranges(data.properties.Category / 5)
     };
 }
 
