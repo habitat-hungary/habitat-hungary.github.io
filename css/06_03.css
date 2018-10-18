@@ -32,9 +32,13 @@ body {
     left: 0;
 }
 
+#timeslide {
+    display: none;
+}
+
 .sliderContainer {
     position: relative;
-    top: 10%;
+    display: none;
 }
 
 
@@ -42,6 +46,7 @@ body {
     display: none;
 }
 
+/*
 input[type=range] {
     -webkit-appearance: none;
     width: 31%;
@@ -139,6 +144,7 @@ input[type=range]:focus::-ms-fill-lower {
 input[type=range]:focus::-ms-fill-upper {
     background: #367ebd;
 }
+*/
 
 
 .ticks-cat {
@@ -164,7 +170,7 @@ input[type=range]:focus::-ms-fill-upper {
 
 
 .ticks {
-    display: flex;
+    display: none;
     justify-content: space-between;
     padding-left: 35%;
     padding-right: 35%;
@@ -172,7 +178,7 @@ input[type=range]:focus::-ms-fill-upper {
 
 .tick {
     position: relative;
-    display: inline-flex;
+    display: none;
     flex-direction: row;
     justify-content: center;
     width: 2px;

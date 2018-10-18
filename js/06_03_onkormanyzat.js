@@ -14,10 +14,10 @@ var geoGenerator = d3.geoPath()
     .projection(projection);
 
 function returnNaN(x) {
-    if (x == 0) {
+    if (x == null) {
         return "Nincs adat";
     } else {
-        return x
+        return x.toFixed(2) + '%'
     }
 
 };
@@ -29,7 +29,7 @@ function handleMouseover(d) {
     var measure = geoGenerator.measure(d);
 
     d3.select('#content .info')
-        .html('<p id="infotext"><b>' + d.properties.NUTS5NAME + '</b><br>Lakástranzakciók átlagos vételára (millió Ft)<br>' + returnNaN(eval('d.properties.Lakástranzakciók_' + inputValue)) + '</p>');
+        .html('<p id="infotext"><b>' + d.properties.NUTS5NAME + '</b><br>Önkormányzati bérlakásállomány változása 2008-2016<br>' + returnNaN(d.properties.Change) + '</p>');
 
     d3.select('#content .bounding-box rect')
         .attr('x', bounds[0][0])
@@ -68,14 +68,14 @@ function update(geojson) {
         .on('mouseout', handleMouseout);
 }
 
-// set slider values
-var inputValue = "2007";
-var time = ["2007", "2008", "2009", "2010", "2011", "2012", "2013", "2014", "2015", "2016", "2017"];
-
-// when the input range changes update the rectangle
-d3.select("#timeslide").on("input", function () {
-    update2(+this.value);
-});
+//// set slider values
+//var inputValue = "2007";
+//var time = ["2007", "2008", "2009", "2010", "2011", "2012", "2013", "2014", "2015", "2016", "2017"];
+//
+//// when the input range changes update the rectangle
+//d3.select("#timeslide").on("input", function () {
+//    update2(+this.value);
+//});
 
 function update2(value) {
     document.getElementById("range").innerHTML = time[value];
@@ -114,7 +114,7 @@ function timeMatch(data) {
 
 function initialState(data) {
     if (document.getElementById("range").innerHTML == 2007) {
-        return d3.interpolateOranges(data.properties.Kat_2007 / 7)
+        return d3.interpolateOranges(data.properties.Category / 7)
     };
 }
 
