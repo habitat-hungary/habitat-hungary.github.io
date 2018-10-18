@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+
+<head>
+    <title>Átlagos lakásárak változása a használt lakások piacán (2007-2017)</title>
+</head>
+<script src="../../js/d3.v4.min.js"></script>
+<script src="../../js/d3-color.v1.min.js"></script>
+<script src="../../js/d3-interpolate.v1.min.js"></script>
+<script src="../../js/d3-scale-chromatic.v1.min.js"></script>
+<script src="../../js/topojson-client@3"></script>
+<link rel="stylesheet" href="../../css/06_02_time_map.css">
+
+<body>
+    <h1>Átlagos lakásárak változása a használt lakások piacán (2007-2017)</h1>
+    <p>Az évi háromnál kevesebb tranzakcióval rendelkező települések esetében nincs adat.</p>
+    <p>Mozgasd az egeret a települések felett!</p>
+    <div id="legend"><img src="scale.png">
+    <div class="ticks-cat">
+                <!-- You could generate the ticks based on your min, max & step values. -->
+                <span class="tick2">Nincs adat</span>
+                <span class="tick2">0 - 5</span>
+                <span class="tick2">5 - 10</span>
+                <span class="tick2">10 - 15</span>
+                <span class="tick2">15 - 20</span>
+                <span class="tick2">20 - 25</span>
+                <span class="tick2">25 - 30</span>
+                <span class="tick2">30 - (millió Ft)</span>
+            </div>
+    </div>
+    <div id="map-wit-time-slider">
+        <div id="sliderContainer">
+            <input id="timeslide" type="range" min="0" max="10" value="0" step="1">
+            <div class="ticks">
+                <!-- You could generate the ticks based on your min, max & step values. -->
+                <span class="tick">2007</span>
+                <span class="tick">2008</span>
+                <span class="tick">2009</span>
+                <span class="tick">2010</span>
+                <span class="tick">2011</span>
+                <span class="tick">2012</span>
+                <span class="tick">2013</span>
+                <span class="tick">2014</span>
+                <span class="tick">2015</span>
+                <span class="tick">2016</span>
+                <span class="tick">2017</span>
+            </div>
+            <span id="range">2007</span>
+        </div>
+    </div>
+    <div id="content">
+        <div class="info"></div>
+        <svg>
+            <g class="map"></g>
+            <g class="bounding-box">
+                <rect></rect>
+            </g>
+            <g class="centroid">
+                <circle r="2"></circle>
+            </g>
+        </svg>
+    </div>
+    <script src="../../js/06_02_embed.js"></script>
+    <p id="sources">Adatok forrása: <a href="http://statinfo.ksh.hu/Statinfo/themeSelector.jsp?page=2&szst=QSLA">KSH 2017a</a>, <a href="https://www.ksh.hu/mikrocenzus2016/kotet_3_demografiai_adatok">2017b</a></p>
+</body>
+
+</html>
