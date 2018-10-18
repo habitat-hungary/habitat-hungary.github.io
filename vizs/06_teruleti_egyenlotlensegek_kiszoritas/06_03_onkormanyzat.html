@@ -3,115 +3,66 @@
 <meta charset="utf-8">
 
 <head>
-    <title>geoPath measures</title>
+    <title>Átlagos lakásárak változása a használt lakások piacán (2007-2017)</title>
 </head>
-
-<style>
-    body {
-        font-family: "Helvetica Neue", Helvetica, sans-serif;
-        font-size: 14px;
-        color: #333;
-    }
-
-    #content .info {
-        height: 20px;
-    }
-
-    #content .map path {
-        fill: #aaa;
-    }
-
-    #content .bounding-box rect {
-        display: none;
-    }
-
-    #content .centroid {
-        display: none;
-    }
-
-    #content .centroid circle {
-        fill: red;
-    }
-
-</style>
+<script src="../../js/d3.v4.min.js"></script>
+<script src="../../js/d3-color.v1.min.js"></script>
+<script src="../../js/d3-interpolate.v1.min.js"></script>
+<script src="../../js/d3-scale-chromatic.v1.min.js"></script>
+<script src="../../js/topojson-client@3"></script>
+<link rel="stylesheet" href="../../css/06_03.css">
 
 <body>
-    <div id="content">
-        <div class="info">Hover over a country</div>
-        <svg width="100vw" height="100vh">
-      <g class="map"></g>
-      <g class="bounding-box"><rect></rect></g>
-      <g class="centroid"><circle r="4"></circle></g>
-    </svg>
+    <h1>Átlagos lakásárak változása a használt lakások piacán (2007-2017)</h1>
+    <p>Az évi háromnál kevesebb tranzakcióval rendelkező települések esetében nincs adat.</p>
+    <p>Mozgasd az egeret a települések felett!</p>
+    <div id="legend"><img src="scale.png">
+    <div class="ticks-cat">
+                <!-- You could generate the ticks based on your min, max & step values. -->
+                <span class="tick2">Nincs adat</span>
+                <span class="tick2">0 - 5</span>
+                <span class="tick2">5 - 10</span>
+                <span class="tick2">10 - 15</span>
+                <span class="tick2">15 - 20</span>
+                <span class="tick2">20 - 25</span>
+                <span class="tick2">25 - 30</span>
+                <span class="tick2">30 - </span>
+            </div>
     </div>
-
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.9.1/d3.min.js"></script>
-
-    <script>
-        var width = window.innerWidth;
-        var height = window.innerHeight;
-        var f = width + height * 5;
-        var projection = d3.geoMercator()
-            .center([19.5, 47]) // roughly the center of Hungary
-            .translate([width / 2, height / 2])
-            .scale(f);
-
-        var geoGenerator = d3.geoPath()
-            .projection(projection);
-
-        function handleMouseover(d) {
-
-            var pixelArea = geoGenerator.area(d);
-            var bounds = geoGenerator.bounds(d);
-            var centroid = geoGenerator.centroid(d);
-            var measure = geoGenerator.measure(d);
-
-            d3.select('#content .info')
-                .text('<p id="infotext"><b>' + d.properties.NUTS5NAME + '</b><br><br>' + d.properties.change + '</p>');
-
-            d3.select('#content .bounding-box rect')
-                .attr('x', bounds[0][0])
-                .attr('y', bounds[0][1])
-                .attr('width', bounds[1][0] - bounds[0][0])
-                .attr('height', bounds[1][1] - bounds[0][1]);
-
-            d3.select('#content .centroid')
-                .style('display', 'inline')
-                .attr('transform', 'translate(' + centroid + ')');
-        }
-
-        function handleMouseout(d) {
-
-
-            d3.select('#content .info')
-                .html('<p id="unseen"><b>info1</b><br>info2<br>info3<p>');
-
-            d3.select('#content .centroid')
-                .style('display', 'none');
-        }
-
-
-        function update(geojson) {
-            var u = d3.select('#content g.map')
-                .selectAll('path')
-                .data(geojson.features);
-
-            u.enter()
-                .append('path')
-                .attr('d', geoGenerator)
-                .on('mouseover', handleMouseover)
-                .on('mouseout', handleMouseout);
-        }
-
-
-
-        // REQUEST DATA
-        d3.json('onklak.geojson', function(err, json) {
-            update(json)
-        })
-
-    </script>
+    <div id="map-wit-time-slider">
+        <div id="sliderContainer">
+            <input id="timeslide" type="range" min="0" max="10" value="0" step="1">
+            <div class="ticks">
+                <!-- You could generate the ticks based on your min, max & step values. -->
+                <span class="tick">2007</span>
+                <span class="tick">2008</span>
+                <span class="tick">2009</span>
+                <span class="tick">2010</span>
+                <span class="tick">2011</span>
+                <span class="tick">2012</span>
+                <span class="tick">2013</span>
+                <span class="tick">2014</span>
+                <span class="tick">2015</span>
+                <span class="tick">2016</span>
+                <span class="tick">2017</span>
+            </div>
+            <span id="range">2007</span>
+        </div>
+    </div>
+    <div id="content">
+        <div class="info"></div>
+        <svg>
+            <g class="map"></g>
+            <g class="bounding-box">
+                <rect></rect>
+            </g>
+            <g class="centroid">
+                <circle r="2"></circle>
+            </g>
+        </svg>
+    </div>
+    <script src="../../js/06_03_onkormanyzat.js"></script>
+    <p id="sources">Adatok forrása: <a href="http://statinfo.ksh.hu/Statinfo/themeSelector.jsp?page=2&szst=QSLA">KSH 2017a</a>, <a href="https://www.ksh.hu/mikrocenzus2016/kotet_3_demografiai_adatok">2017b</a></p>
 </body>
 
 </html>

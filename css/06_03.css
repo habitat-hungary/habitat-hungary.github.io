@@ -1,0 +1,224 @@
+body {
+    font: 14px font: 12px 'NeueHaasGroteskDisp Pro', Arial, Helvetica, sans-serif;
+}
+
+#content .info {
+    height: 20px;
+}
+
+#content .map path {
+    stroke: #000;
+}
+
+#content .bounding-box rect {
+    fill: none;
+    stroke: none;
+}
+
+#content .centroid {
+    display: none;
+}
+
+#content .centroid circle {
+    fill: red;
+}
+
+.map-wit-time-slider {
+    margin: 0;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.sliderContainer {
+    position: relative;
+    top: 10%;
+}
+
+
+#range {
+    display: none;
+}
+
+input[type=range] {
+    -webkit-appearance: none;
+    width: 31%;
+    padding-left: 34%;
+}
+
+input[type=range]:focus {
+    outline: none;
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 8.4px;
+    cursor: pointer;
+    box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+    background: #3071a9;
+    border-radius: 1.3px;
+    border: 0.2px solid #010101;
+}
+
+input[type=range]::-webkit-slider-thumb {
+    box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+    border: 1px solid #000000;
+    height: 30px;
+    width: 8px;
+    border-radius: 3px;
+    background: #ffffff;
+    cursor: pointer;
+    -webkit-appearance: none;
+    margin-top: -14px;
+}
+
+input[type=range]:focus::-webkit-slider-runnable-track {
+    background: #367ebd;
+}
+
+input[type=range]::-moz-range-track {
+    width: 100%;
+    height: 8.4px;
+    cursor: pointer;
+    box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+    background: #3071a9;
+    border-radius: 1.3px;
+    border: 0.2px solid #010101;
+}
+
+input[type=range]::-moz-range-thumb {
+    box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+    border: 1px solid #000000;
+    height: 36px;
+    width: 16px;
+    border-radius: 3px;
+    background: #ffffff;
+    cursor: pointer;
+}
+
+input[type=range]::-ms-track {
+    width: 100%;
+    height: 8.4px;
+    cursor: pointer;
+    background: transparent;
+    border-color: transparent;
+    color: transparent;
+}
+
+input[type=range]::-ms-fill-lower {
+    background: #2a6495;
+    border: 0.2px solid #010101;
+    border-radius: 2.6px;
+    box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+}
+
+input[type=range]::-ms-fill-upper {
+    background: #3071a9;
+    border: 0.2px solid #010101;
+    border-radius: 2.6px;
+    box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+}
+
+input[type=range]::-ms-thumb {
+    box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+    border: 1px solid #000000;
+    height: 36px;
+    width: 16px;
+    border-radius: 3px;
+    background: #ffffff;
+    cursor: pointer;
+    height: 8.4px;
+}
+
+input[type=range]:focus::-ms-fill-lower {
+    background: #3071a9;
+}
+
+input[type=range]:focus::-ms-fill-upper {
+    background: #367ebd;
+}
+
+
+.ticks-cat {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 33%;
+    padding-right: 33%;
+}
+
+.tick2 {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 10%;
+    background: gray;
+    line-height: 0;
+    margin-top: 3%;
+    font-size: xx-small;
+    font-weight: bold;
+}
+
+
+
+.ticks {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 35%;
+    padding-right: 35%;
+}
+
+.tick {
+    position: relative;
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 2px;
+    background: gray;
+    line-height: 0;
+    margin-top: 3%;
+    font-size: xx-small;
+    font-weight: bold;
+}
+
+#sources {
+    font: 14px font: 12px 'NeueHaasGroteskDisp Pro', Arial, Helvetica, sans-serif;
+    font-style: italic;
+    text-align: center;
+}
+
+#infotext {
+    font: 14px font: 12px 'NeueHaasGroteskDisp Pro', Arial, Helvetica, sans-serif;
+}
+
+#unseen {
+    font: 14px font: 12px 'NeueHaasGroteskDisp Pro', Arial, Helvetica, sans-serif;
+    display: none;
+}
+
+#legend {
+    text-align: center;
+}
+
+h1 {
+    font: 14px font: 12px 'NeueHaasGroteskDisp Pro', Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+
+p {
+    font: 14px font: 12px 'NeueHaasGroteskDisp Pro', Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+
+img {
+    height: 1vh;
+    width: 30vw;
+}
+
+#legend {
+    margin-top: 2%;
+    margin-left: 0%;
+    margin-bottom: 2%;
+}
