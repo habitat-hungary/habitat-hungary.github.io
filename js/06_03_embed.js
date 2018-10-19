@@ -1,6 +1,6 @@
 // map
 var width = window.innerWidth;
-var height = window.innerHeight * 0.7;
+var height = window.innerHeight * 0.8;
 d3.select('svg')
     .attr('width', width)
     .attr('height', height);
