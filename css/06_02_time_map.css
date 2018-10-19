@@ -1,7 +1,15 @@
 body {
-    font: 14px font: 12px 'NeueHaasGroteskDisp Pro', Arial, Helvetica, sans-serif;
+    font: 14px 'NeueHaasGroteskDisp Pro', Arial, Helvetica, sans-serif;
 }
 
+p {
+    font: 14px 'NeueHaasGroteskDisp Pro', Arial, Helvetica, sans-serif;
+}
+
+h1 {
+    font: 14px 'NeueHaasGroteskDisp Pro', Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
 #content .info {
     height: 20px;
 }
