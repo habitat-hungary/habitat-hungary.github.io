@@ -161,7 +161,7 @@ input[type=range]:focus::-ms-fill-upper {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    width: 10%;
+    width: 150px;
     background: gray;
     line-height: 0;
     margin-top: 3%;
