@@ -1,9 +1,9 @@
 // map
-var width = window.innerWidth;
-var height = window.innerHeight * 0.9;
+var width = window.innerWidth * 0.99;
+var height = window.innerHeight * 0.7;
 d3.select('svg')
     .attr('width', width)
-    .attr('height', height-150);
+    .attr('height', height-200);
 
 var f = width + height * 4; // works on desktop, laptop, probably it isn't that good on mobile
 var projection = d3.geoMercator()
@@ -114,7 +114,7 @@ function timeMatch(data) {
 
 function initialState(data) {
     if (document.getElementById("range").innerHTML == 2007) {
-        return d3.interpolateBrBG(Math.abs(data.properties.Category) / 5)
+        return d3.interpolateOrRd(Math.abs(data.properties.Category) / 5)
     };
 }
 

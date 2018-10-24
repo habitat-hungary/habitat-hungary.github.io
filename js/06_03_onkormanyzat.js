@@ -114,7 +114,7 @@ function timeMatch(data) {
 
 function initialState(data) {
     if (document.getElementById("range").innerHTML == 2007) {
-        return d3.interpolateBrBG(Math.abs(data.properties.Category) / 5)
+        return d3.interpolateOrRd(Math.abs(data.properties.Category) / 5)
     };
 }
 
