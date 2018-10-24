@@ -3,7 +3,7 @@ var width = window.innerWidth * 0.99;
 var height = window.innerHeight * 0.7;
 d3.select('svg')
     .attr('width', width)
-    .attr('height', height - 150);
+    .attr('height', height * 0.77);
 
 var f = width + height * 5; // works on desktop, laptop, probably it isn't that good on mobile
 var projection = d3.geoMercator()

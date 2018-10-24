@@ -1,9 +1,9 @@
 // map
-var width = window.innerWidth;
+var width = window.innerWidth * 0.95;
 var height = window.innerHeight;
 d3.select('svg')
     .attr('width', width)
-    .attr('height', height);
+    .attr('height', height * 0.9);
 
 var f = width + height * 10.2; // works on desktop, laptop, probably it isn't that good on mobile
 var projection = d3.geoMercator()
